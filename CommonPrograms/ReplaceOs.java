@@ -1,16 +1,22 @@
+package com.farzam.java;
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-class GFG {
+class ReplaceOs{
 	public static void main (String[] args) {
 		Scanner sc=new Scanner(System.in);
 		char[] in;
+		System.out.println("Enter the number of test cases: ");
 		int t=sc.nextInt();
 		while(t>0){
+			System.out.println("Enter the number of rows: ");
 		    int n=sc.nextInt();
+		    System.out.println("Enter the number of columns: ");
 		    int m=sc.nextInt();
 		    in=new char[n*m];
+		    System.out.println("Enter the matrix elements seperated with space: ");
 		    for(int i=0;i<n*m;i++){
 		        in[i]=sc.next().charAt(0);
 		    }//end of for i
@@ -34,11 +40,14 @@ class GFG {
 	        if(i+m<n*m)
 	            g.addEdge(i,i+m);  
 	    }//end of for
+	    System.out.println("Answer: ");
 	    for(int i=0;i<m*n;i++){
 	        current=g.vertices.get(i);
 	        if(current.name=='O'){
 	            current.name=bfs(g,i,m,n);
 	        }//end if
+	        if(i%n==0)
+	        	System.out.println("");
 	        System.out.print(current.name+" ");
 	           // if(i%m==m-1)
 	               // System.out.println("");

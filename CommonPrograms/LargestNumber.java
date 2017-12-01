@@ -2,13 +2,16 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-class GFG {
+class LargetsNumber {
 	public static void main (String[] args) {
 		Scanner sc=new Scanner(System.in);
 		ArrayList<Integer> al=new ArrayList<>();
+		System.out.print("enter number of test cases: ");
 		int t=sc.nextInt();
 		while(t>0){
-		    int n=sc.nextInt();		   
+			System.out.print("enter number of list's elements: ");
+		    int n=sc.nextInt();	
+		    System.out.print("enter list's elements seperated with space: ");
 		    for(int i=0;i<n;i++){
 		        al.add(sc.nextInt());
 		    }//end of for i
@@ -62,6 +65,7 @@ class GFG {
 	                }//end of else
 	        }//end of compare
 	    });
+	    System.out.print("The largest possible number is: ");
 	    for(Integer x:al)
 	    System.out.print(x);
 	}//end of solve

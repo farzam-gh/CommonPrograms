@@ -9,6 +9,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        System.out.print("Enter the number of elements in list: ");
         int n = in.nextInt();
         String[] unsorted = new String[n];
         for(int unsorted_i=0; unsorted_i < n; unsorted_i++){
@@ -24,6 +25,7 @@ public class Solution {
             }
         };
         List<String> l=Arrays.asList(unsorted);
-        l.stream().sorted(c).forEach(x->System.out.println(x));
+        System.out.println("The sorted list is: ");
+        l.stream().sorted(c).forEach(x->System.out.print(x+" "));
     }//end of main
 }//end of class

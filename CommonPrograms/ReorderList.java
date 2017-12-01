@@ -1,15 +1,49 @@
-/* Following is the Linked list node structure */
-/*class Node
-{
-    int data;
-    Node next;
-    Node(int d) {data = d; next = null; }
-}*/
+package com.farzam.java;
+
+
+import java.util.Scanner;
+
+class Node{
 	
-class gfg
-{
-    Node reorderlist(Node head)
-    {
+    public int data;
+    public Node next;
+    
+    Node(int d){
+    	data = d; 
+    	next = null;
+    }
+    public String toString() {
+    	return ""+this.data+" ";
+    }
+}
+
+	
+public class ReorderList{
+	static Node head;
+	static Node current;
+	public static void main(String[] args) {
+		ReorderList rl=new ReorderList();
+		System.out.print("Enter number of elements in Linked List: ");
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		System.out.print("Enter Nodes: ");
+		for(int i=0;i<n;i++) {
+			if(head==null) {
+				head=new Node(sc.nextInt());
+				current=head;
+			}else {
+				current.next=new Node(sc.nextInt());
+				current=current.next;
+			}
+		}
+		System.out.print("The reversed List: ");
+		while(head!=null) {
+		System.out.print(rl.reorderlist(head));
+		head=head.next;
+		}
+	}//main
+	
+   public Node reorderlist(Node head){
         Node slow=head;
         Node fast=slow.next;
         while(fast!=null && fast.next!=null){
@@ -38,7 +72,7 @@ class gfg
 		return node;
     }//end of reorder
     
-    Node reverse(Node node2){
+   public Node reverse(Node node2){
         Node curr=node2;
         Node prev=null;
         Node next;
@@ -52,3 +86,5 @@ class gfg
     }//end of reverse
     
 }//end
+
+

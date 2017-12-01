@@ -1,0 +1,33 @@
+Given a matrix where every element is either ‘O’ or ‘X’, replace ‘O’ with ‘X’ if surrounded by ‘X’.
+ A ‘O’ (or a set of ‘O’) is considered to be by surrounded by ‘X’ if there are ‘X’ at locations just
+ below, just above, just left and just right of it.
+
+Examples:
+
+Input: mat[M][N] =  {{'X', 'O', 'X', 'X', 'X', 'X'},
+                     {'X', 'O', 'X', 'X', 'O', 'X'},
+                     {'X', 'X', 'X', 'O', 'O', 'X'},
+                     {'O', 'X', 'X', 'X', 'X', 'X'},
+                     {'X', 'X', 'X', 'O', 'X', 'O'},
+                     {'O', 'O', 'X', 'O', 'O', 'O'},
+                    };
+Output: mat[M][N] =  {{'X', 'O', 'X', 'X', 'X', 'X'},
+                      {'X', 'O', 'X', 'X', 'X', 'X'},
+                      {'X', 'X', 'X', 'X', 'X', 'X'},
+                      {'O', 'X', 'X', 'X', 'X', 'X'},
+                      {'X', 'X', 'X', 'O', 'X', 'O'},
+                      {'O', 'O', 'X', 'O', 'O', 'O'},
+                    };
+
+Input: mat[M][N] =  {{'X', 'X', 'X', 'X'}
+                     {'X', 'O', 'X', 'X'}
+                     {'X', 'O', 'O', 'X'}
+                     {'X', 'O', 'X', 'X'}
+                     {'X', 'X', 'O', 'O'}
+                    };
+Output: mat[M][N] =  {{'X', 'X', 'X', 'X'}
+                     {'X', 'X', 'X', 'X'}
+                     {'X', 'X', 'X', 'X'}
+                     {'X', 'X', 'X', 'X'}
+                     {'X', 'X', 'O', 'O'}
+                    };
